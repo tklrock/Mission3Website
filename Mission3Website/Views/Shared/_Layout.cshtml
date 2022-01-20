@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!--Template page with dynamic title, header, and body content
+        Consisten styling and navigation-->
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+
+    <title>@ViewData["Title"]</title>
+
+    <!--linking to stylesheets-->
+    <link rel="shortcut icon" href="https://cdn3.iconfinder.com/data/icons/european-cities-landmarks/512/CzechRepublic-OldTownSquarePrague-Prague-landmark-European-512.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="../bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="../css/default.css" rel="stylesheet" />
+
+    <!--Linking to scripts-->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>@ViewData["Header"]</h1>
+        <span id="nav">
+        <a asp-controller="Home" asp-action="Index">Home</a> | 
+        <a asp-controller="Home" asp-action="GradeCalculator">Grades</a>
+        </span>
+    </header>
+    <br />
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

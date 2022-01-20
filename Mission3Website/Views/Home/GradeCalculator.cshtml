@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+    ViewData["Header"] = "Grade Calculator";
+}
+
+@model CalculatorModel
+
+<!--Grade Calculator Form-->
+<h3 id="calculatorHeader"><i class="fa fa-calculator"></i>&nbsp;Grade Calculator</h3>
+<br />
+<form method="post">
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Score (0-100)</th>
+        </tr>
+        <tr>
+            <td>Assignments</td>
+            <td><input type="number" id="assignmentScore" asp-for="Assignments"/></td>
+        </tr>
+        <tr>
+            <td>Group Project</td>
+            <td><input type="number" id="groupProjectScore" asp-for="GroupProject"/></td>
+        </tr>
+        <tr>
+            <td>Quizzes</td>
+            <td><input type="number" id="quizScore" asp-for="Quizzes"/></td>
+        </tr>
+        <tr>
+            <td>Exams</td>
+            <td><input type="number" id="examScore" asp-for="Exams" /></td>
+        </tr>
+        <tr>
+            <td>INTEX</td>
+            <td><input type="number" id="intexScore" asp-for="INTEX"/></td>
+        </tr>
+    </table>
+    <br />
+    <input id="calculateButton" type="submit" value="Calculate Final Grade" />
+    <div asp-validation-summary="All"></div>
+</form>
+<span id="calculatedGrade"></span>
+
+
+<script src="../js/Calculator.js"></script>
